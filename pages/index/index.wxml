@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<!-- <view class="container" style="width: 750rpx; height: 120rpx; display: flex; box-sizing: border-box">
+  <view class="userinfo">
+    <block wx:if="{{canIUseOpenData}}">
+      <view class="userinfo-avatar" bindtap="bindViewTap">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <open-data type="userNickName"></open-data>
+    </block>
+    <block wx:elif="{{!hasUserInfo}}">  
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view> -->
+
+<view>
+  <!-- 阻断与非阻断点击态对比 -->
+  <view hover-class='bg_ccc' class='red p_40' data-id="red" bindtap='bindView'>
+    <view hover-class='bg_ccc' class='green p_40' data-id="green" bindtap='bindView'>
+      <!-- 未阻断点击态 -->
+      <view hover-class='bg_ccc' hover-stop-propagation="true" class='yellow p_40' data-id="yellow" data-name="test1" bindtap='btnClick'>阻断点击态</view>
+    </view>
+  </view> 
+  <!-- 试着设置下按住多久才显示点击效果 默认为 50 -->
+  <view class='red mt40 p_40' hover-class='bg_ccc' hover-start-time='1000'>
+    <text selectable="{{false}}">按住1000毫秒才触发点击态</text>
+  </view>
+  <!-- 试着设置松开延迟多久消失 默认为 400 -->
+  <view class='red mt40 p_40' hover-class='bg_ccc' hover-stay-time='1000'>
+    <text selectable="{{true}}">松开后1000毫秒点击态消失</text>
+  </view>
+</view>
