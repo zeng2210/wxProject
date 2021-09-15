@@ -22,8 +22,6 @@
   </view>
 </view> -->
 
-
-
 <view>
   <!-- 阻断与非阻断点击态对比 -->
   <view hover-class='bg_ccc' class='red p_40' data-id="red" bindtap='bindView'>
@@ -34,10 +32,14 @@
   </view> 
   <!-- 试着设置下按住多久才显示点击效果 默认为 50 -->
   <view class='red mt40 p_40' hover-class='bg_ccc' hover-start-time='1000'>
-    <text selectable="{{false}}">按住1000毫秒才触发点击态</text>
+    <text>按住1000毫秒才触发点击态</text>
   </view>
   <!-- 试着设置松开延迟多久消失 默认为 400 -->
   <view class='red mt40 p_40' hover-class='bg_ccc' hover-stay-time='1000'>
+    <text>松开后1000毫秒后点击态消失</text>
+  </view>
+  <!-- 无任何操作 -->
+  <view class='red mt40 p_40' hover-class='bg_ccc'>
     <text selectable="{{true}}">松开后1000毫秒后点击态消失</text>
   </view>
 </view>
