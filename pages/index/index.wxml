@@ -22,6 +22,8 @@
   </view>
 </view> -->
 
+
+
 <view>
   <!-- 阻断与非阻断点击态对比 -->
   <view hover-class='bg_ccc' class='red p_40' data-id="red" bindtap='bindView'>
