@@ -36,6 +36,6 @@
   </view>
   <!-- 试着设置松开延迟多久消失 默认为 400 -->
   <view class='red mt40 p_40' hover-class='bg_ccc' hover-stay-time='1000'>
-    <text selectable="{{true}}">松开后1000毫秒点击态消失</text>
+    <text selectable="{{true}}">松开后1000毫秒后点击态消失</text>
   </view>
 </view>
