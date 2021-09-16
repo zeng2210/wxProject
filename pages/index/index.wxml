@@ -42,4 +42,65 @@
   <view class='red mt40 p_40' hover-class='bg_ccc'>
     <text selectable="{{true}}">松开后1000毫秒后点击态消失</text>
   </view>
+
+  <!-- button按钮 -->
+  <view>
+    <!-- size属性两个值 default，mini。 默认：default   -->
+    <button size='default'>size =default </button>
+    <button size='mini'>size =mini </button>
+
+    <!-- type属性设置样式类型。 primary- 绿色； default- 白色； warn- 红色 -->
+    <button type='primary'>绿色</button>
+    <button type='default'>白色</button>
+    <button type='warn'>红色</button>
+
+    <!-- plain属性设置是否透明 -->
+    <button plain='{{false}}' type='warn'>不透明</button>
+    <button plain='{{true}}' type='primary'>透明(没有背景色)</button>
+
+    <!-- disabled属性设置是否禁用 -->
+    <button disabled='{{false}}' bindtap='showBtn'>不禁用(有弹框)</button>
+    <button disabled='{{true}}' bindtap='showBtn'>禁用(没有弹框)</button>
+
+    <!-- loading名称前是否带图标 -->
+    <button loading='{{false}}'>名称前不带loading图标</button>
+    <button loading='{{true}}'>名称前带loading图标</button>
+
+    <!-- form-type只用这个按钮放在from里面才能触发 ，分别触发 submit/reset事件 -->
+    <form bindreset="resetPut">
+      <input value='啦啦啦'></input>
+      <button form-type='reset'>重置表单</button>
+    </form>
+    <form bindsubmit="submitPut">
+      <input value='啦啦啦'></input>
+      <button form-type='submit'>提交表单</button>
+    </form>
+
+    <!-- open-type开发功能 -->
+    <button open-type='contact'>打开客服</button>
+    <!-- 分享要在页面设置 onShareAppMessage方法 
+          session-from : 会话源
+          send-message-title ： 会话显示的标题
+          send-message-path :  会话内消息卡片点击跳转小程序路径
+          send-message-img ：  会话内消息卡片图片
+          show-message-card ： 是否显示会话卡片
+          bindcontact :  从客服回话点击卡片返回小程序的回调
+    -->
+    <button open-type='share' session-from="1" send-message-title="测试分享" send-message-path="pages/index/index" send-message-img="http://img.zcool.cn/community/012b245544ebd60000019ae93e4e4b.jpg@1280w_1l_2o_100sh.jpg" show-message-card="{{true}}" bindcontact="openContart">触发分享</button>
+    <!-- 得到用户信息，里面 bindgetuserinfo事件回调得到用户信息 lang 设置中英文 zh_CN 简体中文  zh_TW 繁体中文  en 英文 -->
+    <button open-type='getUserInfo' bindgetuserinfo='getUserInfo' lang='zh_CN'>得到用户信息</button>
+    <!-- 获取用户手机号，这里需要小程序开放功能认证（300百块钱认证）才有这功能（这个比较私密的信息还是小心点用，小心小程序被封） -->
+    <button open-type='getPhoneNumber' bindgetphonenumber="getPhone">获取用户手机号</button>
+    <!-- 打开app功能貌似有很多限制，需要从app打开小程序或者app分享卡片进入的小程序才能进入这个app(其实也相当于返回那个app,这个我没测试通过，我这里不具备这样的场景) 
+    app-parameter ： 想app传递的参数
+    binderror： 发生错误
+    -->
+    <button open-type='launchApp' app-parameter="啦啦啦" binderror="openAppErr">打开app</button>
+    <!-- 打开授权写，可以让用户授权 
+      bindopensetting :  打开授权页回调
+    -->
+    <button open-type='openSetting' bindopensetting="openSeetting">打开授权页</button>
+    <!-- 打开意见反馈，用户反馈内容可以才公众平台查看 -->
+    <button open-type='feedback'>打开意见反馈</button>
+  </view>
 </view>

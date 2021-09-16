@@ -1,13 +1,40 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/selfConter/selfCenter",
+    "pages/logs/logs",
+    "pages/release/release"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "微信小程序",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "color":"red",
+    "selectedColor":"#000",
+    "position": "bottom",
+    "list":[
+      {
+        "pagePath":"pages/index/index",
+        "text":"首页",
+        "iconPath":"/images/home 4-line.png",
+        "selectedIconPath":"/images/home 4-line (1).png"
+      },
+      {
+        "pagePath":"pages/release/release",
+        "text":"发布",
+        "iconPath":"/images/home 4-line.png",
+        "selectedIconPath":"/images/home 4-line (1).png"
+      },
+      {
+        "pagePath":"pages/selfConter/selfCenter",
+        "text":"个人中心",
+        "iconPath":"/images/layout 8-fill.png",
+        "selectedIconPath":"/images/layout 8-fill (1).png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

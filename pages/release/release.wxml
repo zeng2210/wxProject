@@ -1,0 +1,6 @@
+<view>
+    <text>{{text}}</text>
+    <form bindreset="resetPut">
+        <textarea class="inputBox" name="" id="" rows="10"></textarea>
+    </form>
+</view>

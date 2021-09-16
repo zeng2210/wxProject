@@ -1,0 +1,4 @@
+<view>
+    <text>{{btuText}}</text>
+    <button class="btuStyle">请点击</button>
+</view>
